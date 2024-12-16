@@ -1,0 +1,15 @@
+2024-12-02 13:20:41,428 - INFO - Conectado a MongoDB: 1dam.moviles
+2024-12-02 13:20:41,428 - INFO - Transacción iniciada.
+2024-12-02 13:20:41,548 - INFO - Documento insertado con ID: 674da61927b1f992206cc755
+2024-12-02 13:20:41,549 - INFO - Documento insertado con ID: 674da61927b1f992206cc756
+2024-12-02 13:20:41,549 - INFO - Transacción confirmada.
+2024-12-02 13:20:41,566 - INFO - Documentos recuperados: 2
+2024-12-02 13:20:41,566 - INFO - {'_id': ObjectId('674da61927b1f992206cc755'), 'marca': 'Samsung', 'modelo': 'Galaxy S22', 'color': 'Negro', 'almacenamiento': '128GB'}
+2024-12-02 13:20:41,566 - INFO - {'_id': ObjectId('674da61927b1f992206cc756'), 'marca': 'Apple', 'modelo': 'iPhone 13', 'color': 'Blanco', 'almacenamiento': '256GB'}
+2024-12-02 13:20:41,566 - INFO - Transacción iniciada.
+2024-12-02 13:20:41,581 - INFO - Documento actualizado: {'modelo': 'Galaxy S22'}
+2024-12-02 13:20:41,581 - INFO - Transacción confirmada.
+2024-12-02 13:20:41,581 - INFO - Transacción iniciada.
+2024-12-02 13:20:41,583 - INFO - Documento eliminado: {'modelo': 'iPhone 13'}
+2024-12-02 13:20:41,583 - INFO - Transacción confirmada.
+2024-12-02 13:20:41,584 - INFO - Conexión a MongoDB cerrada.

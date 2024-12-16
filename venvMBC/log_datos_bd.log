@@ -1,0 +1,10 @@
+2024-11-25 13:54:06,069 - INFO - Conexión establecida con la base de datos.
+2024-11-25 13:54:06,078 - INFO - Tabla 'Moviles' creada o ya existente.
+2024-11-25 13:54:06,078 - INFO - Transacción iniciada.
+2024-11-25 13:54:06,082 - INFO - Móvil agregado: {'marca': 'Samsung', 'modelo': 'Galaxy S23', 'sistema_operativo': 'Android', 'capacidad': 128, 'precio': 899.99, 'tienda_id': 1}
+2024-11-25 13:54:06,089 - INFO - Transacción confirmada.
+2024-11-25 13:54:06,090 - INFO - Datos leídos: [{'id': 6, 'Marca': 'Samsung', 'Modelo': 'Galaxy S23', 'Sistema_Operativo': 'Android', 'Capacidad': '128', 'Precio': '899.99', 'Tienda_id': '1'}]
+2024-11-25 13:54:06,090 - INFO - Transacción iniciada.
+2024-11-25 13:54:06,095 - INFO - Datos eliminados con modelo=Mi 11.
+2024-11-25 13:54:06,109 - INFO - Transacción confirmada.
+2024-11-25 13:54:06,110 - INFO - Conexión cerrada.

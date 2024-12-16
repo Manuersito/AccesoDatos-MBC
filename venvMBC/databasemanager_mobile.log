@@ -1,0 +1,20 @@
+2024-12-05 08:42:36,425 - INFO - Conexión establecida con ZODB.
+2024-12-05 08:42:36,425 - INFO - Transacción iniciada.
+2024-12-05 08:42:36,425 - INFO - Móvil con ID 1 creado exitosamente.
+2024-12-05 08:42:36,425 - INFO - Móvil con ID 2 creado exitosamente.
+2024-12-05 08:42:36,425 - INFO - Móvil con ID 3 creado exitosamente.
+2024-12-05 08:42:36,425 - INFO - Transacción confirmada.
+2024-12-05 08:42:36,425 - ERROR - Error al leer los móviles: 'Movil' object has no attribute 'ram'
+2024-12-05 08:42:36,425 - INFO - Transacción iniciada.
+2024-12-05 08:42:36,425 - ERROR - Error al crear el móvil con ID 1: Ya existe un móvil con ID 1.
+2024-12-05 08:42:36,425 - INFO - Transacción revertida.
+2024-12-05 08:42:36,425 - ERROR - Error al leer los móviles: 'Movil' object has no attribute 'ram'
+2024-12-05 08:42:36,425 - INFO - Transacción iniciada.
+2024-12-05 08:42:36,425 - INFO - Móvil con ID 2 actualizado exitosamente.
+2024-12-05 08:42:36,425 - INFO - Transacción confirmada.
+2024-12-05 08:42:36,425 - ERROR - Error al leer los móviles: 'Movil' object has no attribute 'ram'
+2024-12-05 08:42:36,426 - INFO - Transacción iniciada.
+2024-12-05 08:42:36,426 - ERROR - Error al eliminar el móvil con ID 99: No existe un móvil con ID 99.
+2024-12-05 08:42:36,426 - INFO - Transacción revertida.
+2024-12-05 08:42:36,426 - ERROR - Error al leer los móviles: 'Movil' object has no attribute 'ram'
+2024-12-05 08:42:36,426 - INFO - Conexión a ZODB cerrada.

@@ -99,3 +99,34 @@ medias = df[["Year", "kmDriven"]].apply(calcular_media, axis=0)
 # Mostrar el resultado
 print("\nMedias de las columnas 'Year' y 'kmDriven':")
 print(medias)
+
+print("")
+print("")
+print("")
+
+# Lista completa de marcas y sus regiones según origen general
+region_data_full = {
+    "Brand": [
+        "Honda", "Toyota", "Maruti Suzuki", "Kia", "Hyundai", "Tata", "Mahindra", "Mitsubishi", "Lexus", "Isuzu",
+        "Datsun", "Ambassador", "ICML", "Bajaj", "Ashok", "Volkswagen", "BMW", "Mercedes-Benz", "Audi", "Renault",
+        "Volvo", "Skoda", "Mini", "Land Rover", "Fiat", "Aston Martin", "Porsche", "Jaguar", "Bentley", "Rolls-Royce",
+        "Maserati", "Ford", "Chevrolet", "Jeep", "MG", "Force", "Ssangyong", "Opel", "Nissan"
+    ],
+    "Region": [
+        "Asia", "Asia", "Asia", "Asia", "Asia", "Asia", "Asia", "Asia", "Asia", "Asia",
+        "Asia", "Asia", "Asia", "Asia", "Asia", "Europe", "Europe", "Europe", "Europe", "Europe",
+        "Europe", "Europe", "Europe", "Europe", "Europe", "Europe", "Europe", "Europe", "Europe", "Europe",
+        "Europe", "America", "America", "America", "Others", "Asia", "Asia", "Europe", "Asia"
+    ]
+}
+
+# Crear un DataFrame con la información de las regiones
+region_df_full = pd.DataFrame(region_data_full)
+
+# Unir la región al DataFrame principal basado en la columna 'Brand'
+df_merged_full = df.merge(region_df_full, on="Brand", how="left")
+
+# Mostrar un resumen del DataFrame combinado
+df_merged_full_summary = df_merged_full[["Brand", "Region", "model", "AskPrice"]].head()
+print(df_merged_full_summary)
+

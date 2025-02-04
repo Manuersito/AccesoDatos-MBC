@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Menu</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+    }
+
+    #menu {
+      background-color: #333;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      width: 200px;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    #menu a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      border-bottom: 1px solid #444;
+    }
+
+    #menu a:hover {
+      background-color: #555;
+    }
+
+    #content {
+      flex: 1;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    @media (max-width: 1200px) {
+      body {
+        flex-direction: column;
+      }
+
+      #menu {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+        border-bottom: 1px solid #444;
+      }
+
+      #menu a {
+        border-bottom: none;
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav id="menu">
+    <a href="#">Option 1</a>
+    <a href="#">Option 2</a>
+    <a href="#">Option 3</a>
+  </nav>
+  <div id="content">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+    <pre id="star"></pre>
+  </div>
+
+  <script>
+    // Optional: Log a message when the layout changes
+    function handleResize() {
+      if (window.innerWidth < 1200) {
+        console.log("Menu moved to the top.");
+      } else {
+        console.log("Menu on the left.");
+      }
+    }
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Initial check
+
+    // Function to draw a star
+    function drawStar(size) {
+      let star = "";
+      for (let i = 0; i < size; i++) {
+        star += " ".repeat(size - i - 1) + "*".repeat(2 * i + 1) + "\n";
+      }
+      for (let i = size - 2; i >= 0; i--) {
+        star += " ".repeat(size - i - 1) + "*".repeat(2 * i + 1) + "\n";
+      }
+      document.getElementById("star").textContent = star;
+    }
+
+    // Draw a star of size 5
+    drawStar(5);
+  </script>
+</body>
+</html>

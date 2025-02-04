@@ -1,5 +1,11 @@
 import pandas as pd
 
+# Cambiar la configuración para mostrar todas las filas y columnas
+pd.set_option('display.max_rows', None)  # Mostrar todas las filas
+pd.set_option('display.max_columns', None)  # Mostrar todas las columnas
+# Configurar pandas para mostrar números en formato normal
+pd.options.display.float_format = '{:,.0f}'.format
+
 # Cargar el archivo CSV en un DataFrame de pandas
 df = pd.read_csv('used_car_dataset.csv')
 
@@ -42,3 +48,29 @@ print(filtered_df.head())
 df_limpio = df.dropna() # Crear un nuevo DataFrame sin valores nulos
 print(f"Filas antes: {df.shape[0]}")
 print(f"Filas después: {df_limpio.shape[0]}")
+
+
+
+# Filtrar filas donde "kmDriven" es nulo antes de rellenar los nulos
+nulos_antes = df[df["kmDriven"].isna()]
+print("Filas donde 'kmDriven' es nulo antes de rellenar:")
+print(nulos_antes.head())
+
+# Rellenar los valores nulos en "kmDriven" con 123
+df["kmDriven"] = df["kmDriven"].fillna(123)
+
+
+# Filtrar filas donde "kmDriven" es igual a 123 después de rellenar los nulos
+filas_123 = df[df["kmDriven"] == 123]
+print("Filas donde 'kmDriven' es igual a 123 después de rellenar:")
+print(filas_123.head())
+
+
+
+
+#Calcular promedio de marca y modelo
+promedio_precio_por_marca_modelo = df.groupby(["Brand", "model"])[["AskPrice"]].mean()
+print("Promedio del precio por marca y modelo:")
+print(promedio_precio_por_marca_modelo)
+
+
